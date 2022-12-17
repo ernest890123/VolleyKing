@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>background.jpg</file>
+        <file>sound.png</file>
+        <file>setting.png</file>
+        <file>music.png</file>
+        <file>beach.jpg</file>
+        <file>sister.png</file>
+        <file>mom.png</file>
+        <file>sea.jpg</file>
+        <file>space.jpg</file>
+        <file>shinChan.jpg</file>
+        <file>shinChan.png</file>
+        <file>dad.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>backgroundMusic.qml</file>
+    </qresource>
+</RCC>
