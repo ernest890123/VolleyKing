@@ -29,10 +29,13 @@ private slots:
 
     void on_start_clicked();
 
+    void on_sound_clicked();
+
 private:
     Ui::MainWindow *ui;
     QMenu *sliderMenu;
     VolumeSlider *volumeslider;
+    int sliderShowCnt = 0;
     QMediaPlayer *player;
 
     QMenu *musicMenu;

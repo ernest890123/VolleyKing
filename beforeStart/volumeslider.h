@@ -25,8 +25,17 @@ public:
 
 public slots:
 
-    //void showMenu(const QPoint &pos);
-
+    void showMenu(const QPoint &pos)
+    {
+        move(pos);
+        show();
+        setFocus(); // so that focusOutEvent will be trigerred
+    }
+protected:
+    void focusOutEvent(QFocusEvent *event) override
+    {
+        this->hide();
+    }
 
 private:
     Ui::VolumeSlider *ui;

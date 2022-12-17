@@ -2,7 +2,6 @@
 #define SELECTION_H
 
 #include <QDialog>
-#include "gameview.h"
 
 namespace Ui {
 class Selection;
@@ -26,7 +25,6 @@ private slots:
 private:
     Ui::Selection *ui;
 
-    GameView *gameWindow;
 };
 
 #endif // SELECTION_H

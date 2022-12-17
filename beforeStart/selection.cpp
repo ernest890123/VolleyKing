@@ -10,8 +10,6 @@ Selection::Selection(QWidget *parent) :
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
-    //ui->p1_img->setStyleSheet("border-image: url(:/img/shinChan.jpg)");
-
     QPixmap shinChan(":/img/shinChan.png");
     shinChan = shinChan.scaled(ui->p1_img->width(), ui->p1_img->height(),Qt::IgnoreAspectRatio);
     ui->p1_img->setPixmap(shinChan);
@@ -73,8 +71,6 @@ void Selection::on_back_clicked()
 
 void Selection::on_ready_clicked()
 {
-    gameWindow = new GameView(this);
-    gameWindow->setWindowTitle(tr("Play Volley"));
-    gameWindow->show();
+    ui->stackedWidget->setCurrentIndex(2);
 }
 

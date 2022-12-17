@@ -10,6 +10,7 @@ VolumeSlider::VolumeSlider(QWidget *parent) :
     ui->setupUi(this);
 
     ui->slider->setRange(0, 100);
+    ui->frame->setStyleSheet("background-color: white");
     //player = new QMediaPlayer;
 
     //connect(ui->slider, &QSlider::valueChanged, [&](int value)

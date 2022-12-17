@@ -10,7 +10,6 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    gameview.cpp \
     instructionpopup.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -18,14 +17,12 @@ SOURCES += \
     volumeslider.cpp
 
 HEADERS += \
-    gameview.h \
     instructionpopup.h \
     mainwindow.h \
     selection.h \
     volumeslider.h
 
 FORMS += \
-    gameview.ui \
     instructionpopup.ui \
     mainwindow.ui \
     selection.ui \

@@ -23,6 +23,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->music->setStyleSheet("border-image: url(:/img/music.png)");
     ui->mode->setStyleSheet("border-image: url(:/img/setting.png)");
 
+    volumeslider = new VolumeSlider(this);
+    volumeslider->hide();
+
     //player = new QMediaPlayer;
 
 /*
@@ -47,13 +50,6 @@ MainWindow::MainWindow(QWidget *parent)
     progressBarLayout->addWidget(soundProgressBarPopUpForm);
     soundProgressBarMenu->setLayout(progressBarLayout);
 */
-
-    //modeChoiceMenu = new QMenu(this);
-    //modechoice = new ModeChoice(this);
-    //QVBoxLayout *modeChoiceLayout = new QVBoxLayout;
-    //modeChoiceLayout->addWidget(modechoice);
-    //modeChoiceMenu->setLayout(modeChoiceLayout);
-
     musicMenu = new QMenu(this);
     QAction *pianoAction = new QAction("piano", this);
     QAction *jazzAction = new QAction("jazz", this);
@@ -103,7 +99,20 @@ void MainWindow::on_instructioin_clicked()
 void MainWindow::on_start_clicked()
 {
     selectionWindow = new Selection(this);
-    selectionWindow->setWindowTitle(tr("Select Players and Background"));
+    selectionWindow->setWindowTitle(tr("Play Volley"));
     selectionWindow->show();
+}
+
+
+void MainWindow::on_sound_clicked()
+{
+    sliderShowCnt++;
+    if(sliderShowCnt % 2 == 1){
+        volumeslider->showMenu(QCursor::pos());
+        volumeslider->setGeometry(350, 2, 200, 70);
+    }
+    else{
+        volumeslider->hide();
+    }
 }
 
